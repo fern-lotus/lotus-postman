@@ -1,6 +1,6 @@
-# {Company} Postman Collection
+# Lotus Postman Collection
 
-This repository contains a [Postman Collection](/collection.json) for the [{company} API](docs_url).
+This repository contains a [Postman Collection](/collection.json) for the [Lotus API](https://docs.uselotus.io/api-reference/api-overview).
 
 [![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/fern-{company})
 
