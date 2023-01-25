@@ -1,0 +1,143 @@
+{
+  "info": {
+    "name": "Lotus API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.uselotus.io",
+      "type": "string"
+    },
+    {
+      "key": "X-API-KEY",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "apikey": [
+      {
+        "key": "value",
+        "value": "{{X-API-KEY}}",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "{{X-API-KEY}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ],
+    "type": "apikey"
+  },
+  "item": [
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/api/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "X-API-KEY",
+                "value": "{{X-API-KEY}}",
+                "type": "string"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"customer_name\": \"example\",\n    \"customer_id\": \"example\",\n    \"email\": \"example\",\n    \"payment_provider\": \"stripe\",\n    \"payment_provider_id\": \"example\",\n    \"metadata\": {\n        \"example\": \"UNKNOWN\"\n    },\n    \"default_currency_code\": \"example\",\n    \"address\": {\n        \"city\": \"example\",\n        \"country\": \"example\",\n        \"line1\": \"example\",\n        \"line2\": \"example\",\n        \"postal_code\": \"example\",\n        \"state\": \"example\"\n    },\n    \"tax_rate\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "retrieve",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/api/customers/:customer_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                ":customer_id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "customer_id",
+                  "value": "",
+                  "description": "The id provided when creating the customer, we suggest matching\nwith your internal customer id in your backend\n"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "X-API-KEY",
+                "value": "{{X-API-KEY}}",
+                "type": "string"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "listAll",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/api/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "X-API-KEY",
+                "value": "{{X-API-KEY}}",
+                "type": "string"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
