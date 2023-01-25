@@ -10,7 +10,7 @@
       "type": "string"
     },
     {
-      "key": "X-API-KEY",
+      "key": "Authorization",
       "value": "",
       "type": "string"
     }
@@ -19,12 +19,12 @@
     "apikey": [
       {
         "key": "value",
-        "value": "{{X-API-KEY}}",
+        "value": "{{Authorization}}",
         "type": "string"
       },
       {
         "key": "key",
-        "value": "{{X-API-KEY}}",
+        "value": "{{Authorization}}",
         "type": "string"
       },
       {
@@ -56,8 +56,8 @@
             },
             "header": [
               {
-                "key": "X-API-KEY",
-                "value": "{{X-API-KEY}}",
+                "key": "Authorization",
+                "value": "{{Authorization}}",
                 "type": "string"
               }
             ],
@@ -99,8 +99,8 @@
             },
             "header": [
               {
-                "key": "X-API-KEY",
-                "value": "{{X-API-KEY}}",
+                "key": "Authorization",
+                "value": "{{Authorization}}",
                 "type": "string"
               }
             ],
@@ -126,8 +126,8 @@
             },
             "header": [
               {
-                "key": "X-API-KEY",
-                "value": "{{X-API-KEY}}",
+                "key": "Authorization",
+                "value": "{{Authorization}}",
                 "type": "string"
               }
             ],
